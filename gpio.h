@@ -2,7 +2,6 @@
 #define GPIO_H
 
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 
 #define GPIO_ERR -1
@@ -68,7 +67,7 @@ int gpio_setValue(int pin, int value)
 	return ret < 0 ? GPIO_ERR : GPIO_OK;
 }
 
-bool gpio_setDirection(int pin, int dir)
+int gpio_setDirection(int pin, int dir)
 {
         char buf[100];
 
